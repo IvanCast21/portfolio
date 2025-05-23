@@ -1,62 +1,59 @@
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Ivan's Portfolio </title>
+    <title>Ivan's Portfolio</title>
     <style>
-        /* Estilos generales de la página */
+        :root {
+            --bg-color: #121212;
+            --text-color: #f0f0f0;
+            --accent-color: #333;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             align-items: start;
             padding: 20px;
         }
 
-        /* Contenedor principal */
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             width: 100%;
             text-align: center;
         }
 
-        /* Estilos para el título y subtítulo de la página */
         .header {
             margin-bottom: 20px;
         }
 
         .header h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 0;
         }
 
         .header h2 {
             font-size: 1.3em;
             margin: 5px 0;
-            color: #666;
+            color: #aaa;
         }
 
-        /* Cuadro de texto debajo del subtítulo */
         .info-box {
-            background-color: #fff;
+            background-color: var(--accent-color);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             margin-top: 10px;
             text-align: left;
             display: flex;
-            align-items: center;
             gap: 15px;
-        }
-
-        .info-box img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
         }
 
         .info-box-content h3 {
@@ -69,12 +66,10 @@
             margin-top: 5px;
         }
 
-        /* Contenedor de la galería */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 10px;
-            max-width: 800px;
             padding: 10px;
         }
 
@@ -82,11 +77,15 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        /* Estilos del modal */
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -107,7 +106,7 @@
             align-items: center;
             max-width: 100%;
             max-height: 100%;
-            background-color: #333;
+            background-color: #222;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -136,30 +135,36 @@
             cursor: pointer;
             font-weight: bold;
         }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <!-- Contenedor principal de la galería -->
         <div class="header">
             <h1>Welcome to my portfolio!</h1>
-            
-            
-            <!-- Información debajo del subtítulo -->
             <div class="info-box">
                 <div class="info-box-content">
-                    <h3>Hello! </h3>
-                    <p>My name is Ivan, and I'm an illustrator from Barcelona. I studied graphic design and like to create bizarre illustrations. I enjoy bringing to life all kinds of characters that look like they've stepped out of a fever dream, and I made this website to showcase my work. I hope you enjoy it! Feel free to contact me at my email: icastellanogo@gmail.com.</p>
+                    <h3>Hello!</h3>
+                    <p>My name is Ivan, and I'm an illustrator from Barcelona. I studied graphic design and like to create bizarre illustrations. I enjoy bringing to life all kinds of characters that look like they've stepped out of a fever dream. I made this website to showcase my work. I hope you enjoy it! Feel free to contact me at my email: icastellanogo@gmail.com.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Galería de imágenes -->
         <div class="gallery">
-            <img src="assets/caracolero.jpg" alt="Imagen 1" onclick="openModal(this)" data-caption="Heavy metal snail">
-            <img src="assets/volcan.jpg" alt="Imagen 2" onclick="openModal(this)" data-caption="Volcano head">
-            <img src="assets/cake.jpg" alt="Imagen 3" onclick="openModal(this)" data-caption="Crustacean cake">
+            <img src="assets/caracolero.jpg" alt="Heavy metal snail" onclick="openModal(this)" data-caption="Heavy metal snail" loading="lazy">
+            <img src="assets/volcan.jpg" alt="Volcano head" onclick="openModal(this)" data-caption="Volcano head" loading="lazy">
+           <img src="assets/cake.jpg" alt="Imagen 3" onclick="openModal(this)" data-caption="Crustacean cake">
             <img src="assets/choco.jpg" alt="Imagen 4" onclick="openModal(this)" data-caption="Choco boy">
             <img src="assets/gastuga.jpg" alt="Imagen 5" onclick="openModal(this)" data-caption="Refueling turtle">
             <img src="assets/heladonavidad.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Christmas ice cream popsicle">
@@ -204,11 +209,10 @@
             <img src="assets/8gambasaurio.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Saurian shrimp">
             <img src="assets/9botell.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Bottle diver">
 
-            
         </div>
     </div>
 
-    <!-- Modal para la imagen ampliada -->
+   
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="modal-content">
@@ -217,20 +221,17 @@
         </div>
     </div>
 
-    <script>
-        function openModal(element) {
-            const modal = document.getElementById("myModal");
-            const modalImg = document.getElementById("modalImg");
-            const modalCaption = document.getElementById("modalCaption");
+    <button onclick="toggleNightmare()" style="position:fixed;bottom:10px;right:10px;z-index:100;">Nightmare Mode</button>
+    <div class="eye" id="eye1"></div>
 
-            modal.style.display = "flex";
-            modalImg.src = element.src;
-            modalCaption.textContent = element.getAttribute("data-caption");
-        }
+    <script src="script.js"></script>
 
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
+    <button onclick="toggleNightmare()" style="position:fixed;bottom:10px;right:10px;z-index:100;">Nightmare Mode</button>
+    
+</body>
+</html>
+
     </script>
+    
 </body>
 </html>
