@@ -1,237 +1,35 @@
-</body>
-</html>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan's Portfolio</title>
-    <style>
-        :root {
-            --bg-color: #121212;
-            --text-color: #f0f0f0;
-            --accent-color: #333;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: start;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .header {
-            margin-bottom: 20px;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        .header h2 {
-            font-size: 1.3em;
-            margin: 5px 0;
-            color: #aaa;
-        }
-
-        .info-box {
-            background-color: var(--accent-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            margin-top: 10px;
-            text-align: left;
-            display: flex;
-            gap: 15px;
-        }
-
-        .info-box-content h3 {
-            margin: 0;
-            font-size: 1.2em;
-        }
-
-        .info-box-content p {
-            font-size: 0.95em;
-            margin-top: 5px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            padding: 10px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            max-width: 100%;
-            max-height: 100%;
-            background-color: #222;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-
-        .modal img {
-            max-width: 100%;
-            max-height: 80vh;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-        }
-
-        .caption {
-            color: #fff;
-            margin-top: 10px;
-            font-size: 1em;
-        }
-
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 28px;
-            color: #fff;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        @media (max-width: 600px) {
-            .gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 400px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101014">
+<meta name="description" content="2000SKID — archivo personal de vídeos, curiosidades y cosas de internet.">
+<title>2000SKID_ // Personal Video Archive</title>
+<link rel="preconnect" href="https://i.ytimg.com"><link rel="preconnect" href="https://www.youtube-nocookie.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101014;--panel:#17171d;--line:#34343d;--text:#f3f3ee;--muted:#9696a2;--green:#9afb83;--pink:#ff72b6;--mono:'DM Mono',monospace;--sans:'Space Grotesk',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.09;background-image:radial-gradient(#fff .5px,transparent .5px);background-size:5px 5px;z-index:5}.scanlines{position:fixed;inset:0;pointer-events:none;z-index:6;opacity:.08;background:repeating-linear-gradient(to bottom,transparent 0,transparent 3px,#000 4px)}.shell{max-width:1180px;width:calc(100% - 48px);margin:auto;position:relative;z-index:1}.topbar{min-height:78px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.logo{font:500 1.25rem var(--mono);letter-spacing:-.08em;color:var(--text);text-decoration:none}.logo span{color:var(--green);animation:blink 1.2s steps(2,start) infinite}.status,.eyebrow,.hero-bottom,.sort-wrap,.filters,.section-heading span,.category,.footer p,.footer>a,.player-top,.player-note{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em}.status{color:var(--green);display:flex;align-items:center;gap:9px}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px #9afb8380}.hero{padding:clamp(50px,9vw,100px) 0 34px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--green);margin:0 0 22px}.eyebrow span{color:var(--muted);margin-left:8px}h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:.98;letter-spacing:-.075em;margin:0;font-weight:700}h1 span{color:var(--green)}.intro{color:#b5b5bf;font-size:clamp(1rem,2vw,1.15rem);line-height:1.7;margin:26px 0 38px}.hero-bottom{display:flex;justify-content:space-between;gap:14px;color:var(--muted);flex-wrap:wrap}.hero-bottom span:first-child{color:var(--pink)}.library{padding:28px 0 70px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px}.searchbox{display:flex;align-items:center;gap:12px;min-height:48px;flex:1;max-width:590px;border:1px solid var(--line);background:var(--panel);padding:0 14px;border-radius:7px;color:var(--green)}.searchbox input{width:100%;color:var(--text);background:transparent;border:0;outline:0;font:.9rem var(--mono)}.searchbox input::placeholder{color:#777783}kbd{border:1px solid #454550;border-radius:3px;padding:2px 6px;color:var(--muted);font:.7rem var(--mono)}.sort-wrap{display:flex;align-items:center;gap:10px;color:var(--muted)}.sort-wrap select{background:var(--panel);color:var(--text);border:1px solid var(--line);padding:10px;border-radius:5px;font:.72rem var(--mono)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 34px}.filter{cursor:pointer;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:4px;padding:9px 12px;font:inherit;transition:.18s}.filter:hover,.filter.active{color:var(--bg);background:var(--green);border-color:var(--green)}.filter span{margin-left:5px}.featured{margin-bottom:38px}.featured-card{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}.thumb{position:relative;display:block;aspect-ratio:16/9;width:100%;overflow:hidden;border:1px solid var(--line);border-radius:5px;background:#22222a;padding:0;cursor:pointer}.featured-card .thumb{border:0;border-radius:0;height:100%}.thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s,filter .25s}.thumb:hover img{transform:scale(1.045);filter:brightness(.7)}.play-icon{position:absolute;inset:0;display:grid;place-items:center;color:white;font-size:2.1rem;text-shadow:0 2px 12px #000;opacity:.9}.featured-copy{padding:clamp(18px,4vw,34px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.featured-label{color:var(--pink);font:.68rem var(--mono);letter-spacing:.08em}.featured-copy h2{font-size:clamp(1.4rem,3vw,2.5rem);letter-spacing:-.05em;margin:14px 0 10px}.featured-copy p{color:var(--muted);line-height:1.6;margin:0 0 20px;font-size:.9rem}.play-button{background:var(--green);color:var(--bg);border:0;border-radius:4px;padding:11px 15px;cursor:pointer;font:500 .75rem var(--mono)}.play-button:hover{background:#fff}.section-heading{display:flex;justify-content:space-between;align-items:center;margin:0 0 18px}.section-heading h2{font:500 .85rem var(--mono);letter-spacing:.05em;margin:0}.green{color:var(--green)}.section-heading span{color:var(--muted)}.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 18px}.video-card{min-width:0}.category{color:var(--green);font-size:.64rem;margin:13px 0 6px;text-transform:uppercase;letter-spacing:.05em}.card-title{color:var(--text);font-weight:600;font-size:1rem;line-height:1.35;margin:0}.card-description{color:var(--muted);font-size:.82rem;line-height:1.5;margin:7px 0 0}.empty{color:var(--muted);font:.85rem var(--mono);padding:50px 0;text-align:center}.footer{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);padding:25px 0 35px}.footer p{color:var(--muted);font-size:.6rem;line-height:1.6}.footer>a{color:var(--green);text-decoration:none;white-space:nowrap}.dialog{width:min(900px,calc(100% - 28px));border:1px solid #4a4a55;border-radius:8px;padding:0;color:var(--text);background:#15151a}.dialog::backdrop{background:#050507e8;backdrop-filter:blur(6px)}.player-top{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px;color:var(--green)}.close{color:var(--text);background:transparent;border:1px solid var(--line);border-radius:4px;padding:8px;cursor:pointer;font:inherit}.player-frame{aspect-ratio:16/9;background:#000}.player-frame iframe{display:block;width:100%;height:100%;border:0}.player-note{color:var(--muted);padding:0 14px 14px;font-size:.62rem}@keyframes blink{to{opacity:.15}}@media(max-width:760px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 13px}.featured-card{grid-template-columns:1fr}.featured-card .thumb{height:auto}.featured-copy{padding:22px}}@media(max-width:520px){.shell{width:calc(100% - 28px)}.topbar{min-height:65px}.status{font-size:.58rem}.toolbar{align-items:stretch;flex-direction:column}.searchbox{max-width:none}.sort-wrap{justify-content:space-between}.video-grid{grid-template-columns:1fr;gap:26px}.card-title{font-size:1.05rem}.footer{align-items:flex-start;flex-direction:column}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Welcome to my portfolio!</h1>
-            <div class="info-box">
-                <div class="info-box-content">
-                    <h3>Hello!</h3>
-                    <p>My name is Ivan, and I'm an illustrator from Barcelona. I studied graphic design and like to create bizarre illustrations. I enjoy bringing to life all kinds of characters that look like they've stepped out of a fever dream. I made this website to showcase my work. I hope you enjoy it! Feel free to contact me at my email: icastellanogo@gmail.com.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="gallery">
-            <img src="assets/caracolero.jpg" alt="Heavy metal snail" onclick="openModal(this)" data-caption="Heavy metal snail" loading="lazy">
-            <img src="assets/volcan.jpg" alt="Volcano head" onclick="openModal(this)" data-caption="Volcano head" loading="lazy">
-           <img src="assets/cake.jpg" alt="Imagen 3" onclick="openModal(this)" data-caption="Crustacean cake">
-            <img src="assets/choco.jpg" alt="Imagen 4" onclick="openModal(this)" data-caption="Choco boy">
-            <img src="assets/gastuga.jpg" alt="Imagen 5" onclick="openModal(this)" data-caption="Refueling turtle">
-            <img src="assets/heladonavidad.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Christmas ice cream popsicle">
-            <img src="assets/kebi.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Dancing Kebab">
-            <img src="assets/1cchillonchop.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Chill on chop">
-            <img src="assets/zapathombre.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Shoe man">
-            <img src="assets/10regadera.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Monster watering can">
-            <img src="assets/11sirenainversa.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Reverse siren">
-            <img src="assets/12beacondisgustado.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="disgruntled bacon">
-            <img src="assets/13bebemurcielago.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Baby bat">
-            <img src="assets/14alcachofa.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="walking artichoke">
-            <img src="assets/19elgnomofumetiis.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="The Smoking Christmas Gnome">
-            <img src="assets/16hawaiana.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Hula girl">
-            <img src="assets/17brocoli.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Broccoli Master">
-            <img src="assets/18titanic.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Cereal Titanic">
-            <img src="assets/19spray.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Glass cleaning head">
-            <img src="assets/20Escoces.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Scotch ginger">
-            <img src="assets/21ojorey.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Eye king">
-            <img src="assets/22vela.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Sail under tension">
-            <img src="assets/23belga.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Average Belgian boy">
-            <img src="assets/38cebolla.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Guitarist onion">
-            <img src="assets/24mexibaby.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Mexibaby">
-            <img src="assets/25cigarro.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Skiing cigar">
-            <img src="assets/27ciervo.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Propelled deer">
-            <img src="assets/28suizo.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Average Swiss">
-            <img src="assets/29cerebro.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Prodigious brain">
-            <img src="assets/37caballoguitarra.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Riding guitar">
-            <img src="assets/2rana.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Swamp dweller">
-            <img src="assets/30pipa.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Pipe Master">
-            <img src="assets/31geisha.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Geisha donut">
-            <img src="assets/32sushi.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Monstrous sushi">
-            <img src="assets/33gimnasta.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Gymnast">
-            <img src="assets/35santabotella.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Bottle Santa">
-            <img src="assets/34bavaro.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Average Bavarian man">
-            <img src="assets/36biceps.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Buddy in the biceps">
-            <img src="assets/3Jirafa.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Giraffe on the roll">
-            <img src="assets/4ojobocata.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="An eye on my sandwich">
-            <img src="assets/5Enchufe.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Plug with legs">
-            <img src="assets/5perritorueda.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Fast Hot Dog">
-            <img src="assets/6bebelunar.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Moon baby">
-            <img src="assets/7molino.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Humanoid mill">
-            <img src="assets/8gambasaurio.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Saurian shrimp">
-            <img src="assets/9botell.jpg" alt="Imagen 6" onclick="openModal(this)" data-caption="Bottle diver">
-
-        </div>
-    </div>
-
-   
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-            <img id="modalImg" src="">
-            <div class="caption" id="modalCaption"></div>
-        </div>
-    </div>
-
-    <button onclick="toggleNightmare()" style="position:fixed;bottom:10px;right:10px;z-index:100;">Nightmare Mode</button>
-    <div class="eye" id="eye1"></div>
-
-    <script src="script.js"></script>
-
-    <button onclick="toggleNightmare()" style="position:fixed;bottom:10px;right:10px;z-index:100;">Nightmare Mode</button>
-    
-</body>
-</html>
-
-    </script>
-    
-</body>
-</html>
+<body><div class="scanlines" aria-hidden="true"></div><div class="shell">
+<header class="topbar"><a class="logo" href="#top" aria-label="2000SKID inicio">2000SKID<span>_</span></a><div class="status"><span class="dot"></span> ARCHIVE ONLINE</div></header>
+<main id="top"><section class="hero"><p class="eyebrow">PERSONAL VIDEO ARCHIVE <span>// EST. 2026</span></p><h1>Un sitio para<br><span>perder el tiempo.</span></h1><p class="intro">Vídeos que me gustan. Cosas que encuentro.<br>Internet en estado puro.</p><div class="hero-bottom"><span>NO ALGORITHM. JUST VIBES.</span><span id="video-count">CARGANDO ARCHIVO...</span></div></section>
+<section class="library" aria-label="Archivo de vídeos"><div class="toolbar"><label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar en el archivo..." autocomplete="off" aria-label="Buscar vídeos"><kbd>/</kbd></label><div class="sort-wrap"><label for="sort">ORDENAR</label><select id="sort"><option value="featured">Destacados</option><option value="title">Título A—Z</option><option value="newest">Añadidos primero</option></select></div></div>
+<nav id="filters" class="filters" aria-label="Filtrar por categoría"></nav><div id="featured" class="featured"></div><div class="section-heading"><h2><span class="green">▸</span> EL ARCHIVO</h2><span id="result-count">0 ELEMENTOS</span></div><div id="video-grid" class="video-grid"></div><p id="empty-state" class="empty" hidden>No se han encontrado vídeos. Prueba otra búsqueda.</p></section></main>
+<footer class="footer"><div><span class="logo">2000SKID<span>_</span></span><p>HECHO CON CURIOSIDAD Y DEMASIADAS PESTAÑAS ABIERTAS.</p></div><a href="#top">VOLVER ARRIBA ↑</a></footer></div>
+<dialog id="player-dialog" class="dialog"><div class="player-top"><span id="player-title">REPRODUCIENDO...</span><button id="close-player" class="close" aria-label="Cerrar reproductor">✕ CERRAR</button></div><div id="player-frame" class="player-frame"></div><p class="player-note">PULSA ESC O CERRAR PARA VOLVER AL ARCHIVO.</p></dialog>
+<script>
+/* EDITA ESTA LISTA PARA AÑADIR TUS VÍDEOS. El ID es la parte que va después de v= en YouTube. */
+const VIDEOS = [
+ {id:"dQw4w9WgXcQ",title:"Un clásico de internet",category:"CURIOSIDADES",description:"Ejemplo de tarjeta: reemplázalo por uno de tus vídeos.",featured:true,added:"2026-10-19"},
+ {id:"M7lc1UVf-VE",title:"YouTube: vídeo de ejemplo",category:"INTERNET",description:"Añade aquí tus propios títulos, categorías y descripciones.",featured:false,added:"2026-10-18"},
+ {id:"aqz-KE-bpKQ",title:"Vídeo de muestra",category:"OTROS",description:"Los vídeos de ejemplo son solo para mostrar el diseño.",featured:false,added:"2026-10-17"}
+];
+const $=s=>document.querySelector(s),grid=$("#video-grid"),filters=$("#filters"),search=$("#search"),sort=$("#sort"),dialog=$("#player-dialog"),frame=$("#player-frame");let activeCategory="all";
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const thumb=v=>`https://i.ytimg.com/vi/${encodeURIComponent(v.id)}/hqdefault.jpg`;
+function card(v){return `<article class="video-card"><button class="thumb" data-play="${esc(v.id)}" aria-label="Reproducir ${esc(v.title)}"><img src="${thumb(v)}" alt="Miniatura de ${esc(v.title)}" loading="lazy"><span class="play-icon" aria-hidden="true">▶</span></button><p class="category">${esc(v.category||"OTROS")}</p><h3 class="card-title">${esc(v.title)}</h3>${v.description?`<p class="card-description">${esc(v.description)}</p>`:""}</article>`}
+function render(){const cats=[...new Set(VIDEOS.map(v=>v.category||"OTROS"))].sort((a,b)=>a.localeCompare(b,"es"));filters.innerHTML=`<button class="filter ${activeCategory==="all"?"active":""}" data-category="all">TODO <span>✳</span></button>`+cats.map(c=>`<button class="filter ${activeCategory===c?"active":""}" data-category="${esc(c)}">${esc(c)}</button>`).join("");let list=VIDEOS.filter(v=>(activeCategory==="all"||(v.category||"OTROS")==activeCategory)&&`${v.title} ${v.description||""} ${v.category||""}`.toLocaleLowerCase("es").includes(search.value.trim().toLocaleLowerCase("es")));if(sort.value==="title")list.sort((a,b)=>a.title.localeCompare(b.title,"es"));if(sort.value==="newest")list.sort((a,b)=>(b.added||"").localeCompare(a.added||""));if(sort.value==="featured")list.sort((a,b)=>Number(Boolean(b.featured))-Number(Boolean(a.featured)));grid.innerHTML=list.map(card).join("");$("#video-count").textContent=`${VIDEOS.length} VÍDEO${VIDEOS.length===1?"":"S"} EN EL ARCHIVO`;$ ("#result-count").textContent=`${list.length} ELEMENTO${list.length===1?"":"S"}`;$("#empty-state").hidden=list.length>0;const v=VIDEOS.find(x=>x.featured);$("#featured").innerHTML=v&&activeCategory==="all"&&!search.value.trim()?`<article class="featured-card"><button class="thumb" data-play="${esc(v.id)}" aria-label="Reproducir ${esc(v.title)}"><img src="${thumb(v)}" alt="Miniatura de ${esc(v.title)}" loading="lazy"><span class="play-icon">▶</span></button><div class="featured-copy"><span class="featured-label">✳ SELECCIÓN DEL ARCHIVO</span><h2>${esc(v.title)}</h2><p>${esc(v.description||"Un vídeo seleccionado de la colección.")}</p><button class="play-button" data-play="${esc(v.id)}">▶ &nbsp; REPRODUCIR</button></div></article>`:""}
+function play(id){const v=VIDEOS.find(x=>x.id===id);if(!v)return;$("#player-title").textContent=v.title.toUpperCase();frame.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0" title="${esc(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;dialog.showModal()}
+function closePlayer(){dialog.close();frame.innerHTML=""}
+filters.addEventListener("click",e=>{const b=e.target.closest("[data-category]");if(b){activeCategory=b.dataset.category;render()}});search.addEventListener("input",render);sort.addEventListener("change",render);document.addEventListener("click",e=>{const b=e.target.closest("[data-play]");if(b)play(b.dataset.play)});$("#close-player").addEventListener("click",closePlayer);dialog.addEventListener("click",e=>{if(e.target===dialog)closePlayer()});dialog.addEventListener("close",()=>frame.innerHTML="");document.addEventListener("keydown",e=>{if(e.key==="/"&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();search.focus()}});render();
+</script></body></html>
