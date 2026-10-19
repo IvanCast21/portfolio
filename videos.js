@@ -1,10 +1,9 @@
 const VIDEOS = [
     {
-      id: "dQw4w9WgXcQ",
-      title: "Un clásico de internet",
-      category: "CURIOSIDADES",
-      description: "Un vídeo que me gusta.",
-      featured: true,
-      added: "2026-10-19"
+        title: "Daft Punk — Digital Love",
+    url: "https://www.youtube.com/watch?v=FxzBvqY5PP0",
+    category: "Música",
+    year: "2001",
+    description: "Electrónica y nostalgia."
     }
   ];
