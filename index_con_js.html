@@ -1,37 +1,1260 @@
+
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101014">
-<meta name="description" content="2000SKID — archivo personal de vídeos, curiosidades y cosas de internet.">
-<title>2000SKID_ // Personal Video Archive</title>
-<link rel="preconnect" href="https://i.ytimg.com"><link rel="preconnect" href="https://www.youtube-nocookie.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b0a">
+<title>2000SKID — Videoteca</title>
+
 <style>
-:root{--bg:#101014;--panel:#17171d;--line:#34343d;--text:#f3f3ee;--muted:#9696a2;--green:#9afb83;--pink:#ff72b6;--mono:'DM Mono',monospace;--sans:'Space Grotesk',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.09;background-image:radial-gradient(#fff .5px,transparent .5px);background-size:5px 5px;z-index:5}.scanlines{position:fixed;inset:0;pointer-events:none;z-index:6;opacity:.08;background:repeating-linear-gradient(to bottom,transparent 0,transparent 3px,#000 4px)}.shell{max-width:1180px;width:calc(100% - 48px);margin:auto;position:relative;z-index:1}.topbar{min-height:78px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.logo{font:500 1.25rem var(--mono);letter-spacing:-.08em;color:var(--text);text-decoration:none}.logo span{color:var(--green);animation:blink 1.2s steps(2,start) infinite}.status,.eyebrow,.hero-bottom,.sort-wrap,.filters,.section-heading span,.category,.footer p,.footer>a,.player-top,.player-note{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em}.status{color:var(--green);display:flex;align-items:center;gap:9px}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px #9afb8380}.hero{padding:clamp(50px,9vw,100px) 0 34px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--green);margin:0 0 22px}.eyebrow span{color:var(--muted);margin-left:8px}h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:.98;letter-spacing:-.075em;margin:0;font-weight:700}h1 span{color:var(--green)}.intro{color:#b5b5bf;font-size:clamp(1rem,2vw,1.15rem);line-height:1.7;margin:26px 0 38px}.hero-bottom{display:flex;justify-content:space-between;gap:14px;color:var(--muted);flex-wrap:wrap}.hero-bottom span:first-child{color:var(--pink)}.library{padding:28px 0 70px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px}.searchbox{display:flex;align-items:center;gap:12px;min-height:48px;flex:1;max-width:590px;border:1px solid var(--line);background:var(--panel);padding:0 14px;border-radius:7px;color:var(--green)}.searchbox input{width:100%;color:var(--text);background:transparent;border:0;outline:0;font:.9rem var(--mono)}.searchbox input::placeholder{color:#777783}kbd{border:1px solid #454550;border-radius:3px;padding:2px 6px;color:var(--muted);font:.7rem var(--mono)}.sort-wrap{display:flex;align-items:center;gap:10px;color:var(--muted)}.sort-wrap select{background:var(--panel);color:var(--text);border:1px solid var(--line);padding:10px;border-radius:5px;font:.72rem var(--mono)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 34px}.filter{cursor:pointer;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:4px;padding:9px 12px;font:inherit;transition:.18s}.filter:hover,.filter.active{color:var(--bg);background:var(--green);border-color:var(--green)}.filter span{margin-left:5px}.featured{margin-bottom:38px}.featured-card{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}.thumb{position:relative;display:block;aspect-ratio:16/9;width:100%;overflow:hidden;border:1px solid var(--line);border-radius:5px;background:#22222a;padding:0;cursor:pointer}.featured-card .thumb{border:0;border-radius:0;height:100%}.thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s,filter .25s}.thumb:hover img{transform:scale(1.045);filter:brightness(.7)}.play-icon{position:absolute;inset:0;display:grid;place-items:center;color:white;font-size:2.1rem;text-shadow:0 2px 12px #000;opacity:.9}.featured-copy{padding:clamp(18px,4vw,34px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.featured-label{color:var(--pink);font:.68rem var(--mono);letter-spacing:.08em}.featured-copy h2{font-size:clamp(1.4rem,3vw,2.5rem);letter-spacing:-.05em;margin:14px 0 10px}.featured-copy p{color:var(--muted);line-height:1.6;margin:0 0 20px;font-size:.9rem}.play-button{background:var(--green);color:var(--bg);border:0;border-radius:4px;padding:11px 15px;cursor:pointer;font:500 .75rem var(--mono)}.play-button:hover{background:#fff}.section-heading{display:flex;justify-content:space-between;align-items:center;margin:0 0 18px}.section-heading h2{font:500 .85rem var(--mono);letter-spacing:.05em;margin:0}.green{color:var(--green)}.section-heading span{color:var(--muted)}.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 18px}.video-card{min-width:0}.category{color:var(--green);font-size:.64rem;margin:13px 0 6px;text-transform:uppercase;letter-spacing:.05em}.card-title{color:var(--text);font-weight:600;font-size:1rem;line-height:1.35;margin:0}.card-description{color:var(--muted);font-size:.82rem;line-height:1.5;margin:7px 0 0}.empty{color:var(--muted);font:.85rem var(--mono);padding:50px 0;text-align:center}.footer{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);padding:25px 0 35px}.footer p{color:var(--muted);font-size:.6rem;line-height:1.6}.footer>a{color:var(--green);text-decoration:none;white-space:nowrap}.dialog{width:min(900px,calc(100% - 28px));border:1px solid #4a4a55;border-radius:8px;padding:0;color:var(--text);background:#15151a}.dialog::backdrop{background:#050507e8;backdrop-filter:blur(6px)}.player-top{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px;color:var(--green)}.close{color:var(--text);background:transparent;border:1px solid var(--line);border-radius:4px;padding:8px;cursor:pointer;font:inherit}.player-frame{aspect-ratio:16/9;background:#000}.player-frame iframe{display:block;width:100%;height:100%;border:0}.player-note{color:var(--muted);padding:0 14px 14px;font-size:.62rem}@keyframes blink{to{opacity:.15}}@media(max-width:760px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 13px}.featured-card{grid-template-columns:1fr}.featured-card .thumb{height:auto}.featured-copy{padding:22px}}@media(max-width:520px){.shell{width:calc(100% - 28px)}.topbar{min-height:65px}.status{font-size:.58rem}.toolbar{align-items:stretch;flex-direction:column}.searchbox{max-width:none}.sort-wrap{justify-content:space-between}.video-grid{grid-template-columns:1fr;gap:26px}.card-title{font-size:1.05rem}.footer{align-items:flex-start;flex-direction:column}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #080b0a;
+  --panel: #101513;
+  --line: #2b3930;
+  --text: #edf4ec;
+  --muted: #8a9b8e;
+  --green: #b7ff4a;
+  --mono: "DM Mono", monospace;
+  --sans: "Space Grotesk", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .16;
+  background-image:
+    linear-gradient(rgba(183,255,74,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(183,255,74,.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+  z-index: -1;
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  opacity: .10;
+  background: repeating-linear-gradient(
+    to bottom, transparent 0, transparent 3px, #000 4px
+  );
+}
+
+.topbar {
+  min-height: 68px;
+  padding: 0 clamp(20px, 5vw, 76px);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(8,11,10,.88);
+}
+
+.brand {
+  font: 500 20px var(--mono);
+  letter-spacing: -1px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand span:last-child { color: var(--green); }
+.brand-mark { color: var(--green); margin-right: 8px; }
+
+.top-note, .eyebrow, .status-line, footer,
+.card-meta, .dialog-head {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+}
+
+.top-note { color: var(--muted); }
+
+.wrap {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: clamp(58px, 9vw, 112px) 0 48px;
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--green);
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-size: clamp(54px, 9vw, 108px);
+  line-height: .9;
+  letter-spacing: -.085em;
+  margin: 0;
+  font-weight: 700;
+}
+
+h1 span { color: var(--green); }
+
+.intro {
+  font-size: clamp(15px, 2vw, 18px);
+  color: #aebbb0;
+  max-width: 480px;
+  line-height: 1.6;
+  margin: 26px 0;
+}
+
+.status-line {
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pulse {
+  width: 7px;
+  height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--green);
+}
+
+.slash { color: #445347; }
+
+.toolbar {
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 0 14px;
+  min-width: min(100%, 300px);
+  height: 42px;
+  flex: 1;
+  max-width: 380px;
+  color: var(--green);
+}
+
+.searchbox span { font-size: 24px; }
+
+.searchbox input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--text);
+  font: 12px var(--mono);
+  width: 100%;
+}
+
+.searchbox input::placeholder { color: #657267; }
+
+.categories {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.category-button {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font: 10px var(--mono);
+  letter-spacing: .6px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.category-button:hover,
+.category-button.active {
+  color: var(--bg);
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding: 10px 0 70px;
+}
+
+.video-card {
+  min-width: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  transition: transform .18s, border-color .18s;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green);
+}
+
+.thumb {
+  aspect-ratio: 16 / 9;
+  background: #1b241e;
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s;
+}
+
+.video-card:hover .thumb img { transform: scale(1.04); }
+
+.play-icon {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--green);
+  background: rgba(8,11,10,.85);
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-size: 15px;
+}
+
+.card-body { padding: 15px 15px 16px; }
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--green);
+  font-size: 9px;
+  margin-bottom: 9px;
+}
+
+.card-title {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0 0 7px;
+  letter-spacing: -.5px;
+}
+
+.card-description {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 36px;
+}
+
+.empty-state {
+  padding: 40px 0 90px;
+  text-align: center;
+  color: var(--muted);
+  font: 12px var(--mono);
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 0 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #6e7e72;
+  font-size: 9px;
+}
+
+.footer-star { color: var(--green); }
+
+.video-dialog {
+  width: min(900px, 94vw);
+  padding: 0;
+  background: #090d0a;
+  color: var(--text);
+  border: 1px solid var(--green);
+  box-shadow: 0 0 60px #000;
+}
+
+.video-dialog::backdrop {
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(4px);
+}
+
+.dialog-head {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--green);
+}
+
+.close-button {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: 10px var(--mono);
+  cursor: pointer;
+}
+
+.player {
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 850px) {
+  .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .toolbar { align-items: stretch; }
+  .searchbox { max-width: none; }
+  .categories { width: 100%; }
+}
+
+@media (max-width: 540px) {
+  .top-note { font-size: 8px; }
+  .video-grid { grid-template-columns: 1fr; gap: 14px; }
+  .hero { padding-top: 64px; }
+  .card-title { font-size: 20px; }
+  footer { line-height: 1.7; }
+}
 </style>
 </head>
-<body><div class="scanlines" aria-hidden="true"></div><div class="shell">
-<header class="topbar"><a class="logo" href="#top" aria-label="2000SKID inicio">2000SKID<span>_</span></a><div class="status"><span class="dot"></span> ARCHIVE ONLINE</div></header>
-<main id="top"><section class="hero"><p class="eyebrow">PERSONAL VIDEO ARCHIVE <span>// EST. 2026</span></p><h1>Un sitio para<br><span>perder el tiempo.</span></h1><p class="intro">Vídeos que me gustan. Cosas que encuentro.<br>Internet en estado puro.</p><div class="hero-bottom"><span>NO ALGORITHM. JUST VIBES.</span><span id="video-count">CARGANDO ARCHIVO...</span></div></section>
-<section class="library" aria-label="Archivo de vídeos"><div class="toolbar"><label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar en el archivo..." autocomplete="off" aria-label="Buscar vídeos"><kbd>/</kbd></label><div class="sort-wrap"><label for="sort">ORDENAR</label><select id="sort"><option value="featured">Destacados</option><option value="title">Título A—Z</option><option value="newest">Añadidos primero</option></select></div></div>
-<nav id="filters" class="filters" aria-label="Filtrar por categoría"></nav><div id="featured" class="featured"></div><div class="section-heading"><h2><span class="green">▸</span> EL ARCHIVO</h2><span id="result-count">0 ELEMENTOS</span></div><div id="video-grid" class="video-grid"></div><p id="empty-state" class="empty" hidden>No se han encontrado vídeos. Prueba otra búsqueda.</p></section></main>
-<footer class="footer"><div><span class="logo">2000SKID<span>_</span></span><p>HECHO CON CURIOSIDAD Y DEMASIADAS PESTAÑAS ABIERTAS.</p></div><a href="#top">VOLVER ARRIBA ↑</a></footer></div>
-<dialog id="player-dialog" class="dialog"><div class="player-top"><span id="player-title">REPRODUCIENDO...</span><button id="close-player" class="close" aria-label="Cerrar reproductor">✕ CERRAR</button></div><div id="player-frame" class="player-frame"></div><p class="player-note">PULSA ESC O CERRAR PARA VOLVER AL ARCHIVO.</p></dialog>
-<script src="videos.js" defer></script>
-<script src="script.js" defer></script>
-  <script>
+
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="#">
+    <span class="brand-mark">✳</span> 2000<span>SKID</span>
+  </a>
+  <div class="top-note">ARCHIVO DIGITAL // EST. 2000</div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">/// VIDEOTECA INDEPENDIENTE</p>
+    <h1>Tu internet.<br><span>Tu archivo.</span></h1>
+    <p class="intro">
+      Una colección personal de vídeos, rarezas y recuerdos de la web.
+    </p>
+    <div class="status-line">
+      <span class="pulse"></span> SISTEMA EN LÍNEA
+      <span class="slash">/</span>
+      <span id="video-count">0 ARCHIVOS</span>
+    </div>
+  </section>
+
+  <section class="toolbar" aria-label="Buscar vídeos">
+    <label class="searchbox">
+      <span aria-hidden="true">⌕</span>
+      <input id="search" type="search" placeholder="Buscar en el archivo..." autocomplete="off">
+    </label>
+    <div id="categories" class="categories" aria-label="Filtrar por categoría"></div>
+  </section>
+
+  <section id="video-grid" class="video-grid" aria-live="polite"></section>
+  <p id="empty-state" class="empty-state" hidden>
+    No hay resultados. Prueba otra búsqueda o categoría.
+  </p>
+
+  <footer>
+    <span>2000SKID © <span id="year"></span></span>
+    <span>HECHO PARA PERDERSE EN INTERNET <span class="footer-star">✳</span></span>
+  </footer>
+</main>
+
+<dialog id="video-dialog" class="video-dialog">
+  <div class="dialog-head">
+    <span id="dialog-title">REPRODUCIENDO ARCHIVO</span>
+    <button id="close-dialog" class="close-button" aria-label="Cerrar vídeo">✕ CERRAR</button>
+  </div>
+  <div id="player" class="player"></div>
+</dialog>
+
+<script>
+/*
+=========================================================
+AÑADIR VÍDEOS:
+1. Copia uno de los bloques de la lista.
+2. Pégalo antes del cierre ]; de la lista.
+3. Pon una coma entre cada bloque.
+4. Cambia título, enlace, categoría, año y descripción.
+=========================================================
+*/
 const videos = [
   {
     titulo: "Daft Punk — Digital Love",
-    enlace: "https://www.youtube.com/watch?v=FxzBvqY5PP0",
+    url: "https://www.youtube.com/watch?v=FxzBvqY5PP0",
     categoria: "Música",
-    año: "2001"
+    anio: "2001",
+    descripcion: "Electrónica, animación y nostalgia de principios de los 2000."
   },
   {
-    titulo: "Mi nuevo vídeo",
-    enlace: "https://www.youtube.com/watch?v=PEGA_AQUI_EL_ID",
+    titulo: "Gorillaz — Feel Good Inc.",
+    url: "https://www.youtube.com/watch?v=HyHNuVaZJ-k",
+    categoria: "Música",
+    anio: "2005",
+    descripcion: "Un clásico animado de la era dorada de internet."
+  },
+  {
+    titulo: "Crazy Frog — Axel F",
+    url: "https://www.youtube.com/watch?v=k85mRPqvMbE",
     categoria: "Internet",
-    año: "2005"
+    anio: "2005",
+    descripcion: "Caos digital y cultura pop en estado puro."
+  },
+  {
+    titulo: "The White Stripes — Seven Nation Army",
+    url: "https://www.youtube.com/watch?v=0J2QdDbelmY",
+    categoria: "Música",
+    anio: "2003",
+    descripcion: "Un riff que acabó siendo un himno generacional."
+  },
+  {
+    titulo: "Homestar Runner — Trogdor",
+    url: "https://www.youtube.com/watch?v=90X5NJleYJQ",
+    categoria: "Animación",
+    anio: "2003",
+    descripcion: "Humor web con sabor a Flash y a vieja escuela."
+  },
+  {
+    titulo: "Rick Astley — Never Gonna Give You Up",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    categoria: "Internet",
+    anio: "1987",
+    descripcion: "El rickroll: una tradición eterna de internet."
   }
 ];
+
+const grid = document.getElementById("video-grid");
+const search = document.getElementById("search");
+const categoriesEl = document.getElementById("categories");
+const empty = document.getElementById("empty-state");
+const count = document.getElementById("video-count");
+const dialog = document.getElementById("video-dialog");
+const player = document.getElementById("player");
+const dialogTitle = document.getElementById("dialog-title");
+
+let activeCategory = "Todos";
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function youtubeId(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes("youtu.be")) return u.pathname.slice(1);
+    if (u.hostname.includes("youtube.com")) {
+      if (u.pathname === "/watch") return u.searchParams.get("v");
+      const parts = u.pathname.split("/");
+      const i = parts.findIndex(x => ["embed", "shorts", "live"].includes(x));
+      if (i >= 0) return parts[i + 1];
+    }
+  } catch (e) {}
+  return null;
+}
+
+function buildCategories() {
+  categoriesEl.innerHTML = "";
+  const categories = ["Todos", ...new Set(videos.map(v => v.categoria).filter(Boolean))];
+
+  categories.forEach(category => {
+    const button = document.createElement("button");
+    button.className = "category-button" + (category === activeCategory ? " active" : "");
+    button.type = "button";
+    button.textContent = category.toUpperCase();
+
+    button.addEventListener("click", () => {
+      activeCategory = category;
+      buildCategories();
+      render();
+    });
+
+    categoriesEl.appendChild(button);
+  });
+}
+
+function playVideo(video) {
+  const id = youtubeId(video.url);
+
+  if (!id) {
+    window.open(video.url, "_blank", "noopener,noreferrer");
+    return;
+  }
+
+  dialogTitle.textContent = "REPRODUCIENDO // " + video.titulo;
+  player.innerHTML = "";
+
+  const frame = document.createElement("iframe");
+  frame.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) + "?autoplay=1&rel=0";
+  frame.title = video.titulo;
+  frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  frame.allowFullscreen = true;
+
+  player.appendChild(frame);
+  dialog.showModal();
+}
+
+function render() {
+  const query = search.value.trim().toLowerCase();
+
+  const filtered = videos.filter(video => {
+    const categoryMatch = activeCategory === "Todos" || video.categoria === activeCategory;
+    const text = (
+      video.titulo + " " +
+      (video.descripcion || "") + " " +
+      (video.categoria || "") + " " +
+      (video.anio || "")
+    ).toLowerCase();
+
+    return categoryMatch && text.includes(query);
+  });
+
+  count.textContent = filtered.length + " " +
+    (filtered.length === 1 ? "ARCHIVO" : "ARCHIVOS");
+
+  grid.innerHTML = "";
+  empty.hidden = filtered.length > 0;
+
+  filtered.forEach(video => {
+    const card = document.createElement("article");
+    card.className = "video-card";
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", "Reproducir " + video.titulo);
+
+    const thumb = document.createElement("div");
+    thumb.className = "thumb";
+
+    const img = document.createElement("img");
+    img.loading = "lazy";
+    img.alt = "";
+
+    const id = youtubeId(video.url);
+    if (id) {
+      img.src = "https://i.ytimg.com/vi/" + encodeURIComponent(id) + "/hqdefault.jpg";
+      img.onerror = () => { img.style.display = "none"; };
+    }
+
+    thumb.appendChild(img);
+
+    const play = document.createElement("span");
+    play.className = "play-icon";
+    play.textContent = "▶";
+    thumb.appendChild(play);
+
+    const body = document.createElement("div");
+    body.className = "card-body";
+
+    const meta = document.createElement("div");
+    meta.className = "card-meta";
+
+    const category = document.createElement("span");
+    category.textContent = (video.categoria || "SIN CATEGORÍA").toUpperCase();
+
+    const year = document.createElement("span");
+    year.textContent = video.anio || "—";
+
+    meta.append(category, year);
+
+    const title = document.createElement("h2");
+    title.className = "card-title";
+    title.textContent = video.titulo || "Vídeo sin título";
+
+    const description = document.createElement("p");
+    description.className = "card-description";
+    description.textContent = video.descripcion || "Pulsa para reproducir el archivo.";
+
+    body.append(meta, title, description);
+    card.append(thumb, body);
+
+    card.addEventListener("click", () => playVideo(video));
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        playVideo(video);
+      }
+    });
+
+    grid.appendChild(card);
+  });
+}
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b0a">
+<title>2000SKID — Videoteca</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #080b0a;
+  --panel: #101513;
+  --line: #2b3930;
+  --text: #edf4ec;
+  --muted: #8a9b8e;
+  --green: #b7ff4a;
+  --mono: "DM Mono", monospace;
+  --sans: "Space Grotesk", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .16;
+  background-image:
+    linear-gradient(rgba(183,255,74,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(183,255,74,.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+  z-index: -1;
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  opacity: .10;
+  background: repeating-linear-gradient(
+    to bottom, transparent 0, transparent 3px, #000 4px
+  );
+}
+
+.topbar {
+  min-height: 68px;
+  padding: 0 clamp(20px, 5vw, 76px);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(8,11,10,.88);
+}
+
+.brand {
+  font: 500 20px var(--mono);
+  letter-spacing: -1px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand span:last-child { color: var(--green); }
+.brand-mark { color: var(--green); margin-right: 8px; }
+
+.top-note, .eyebrow, .status-line, footer,
+.card-meta, .dialog-head {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+}
+
+.top-note { color: var(--muted); }
+
+.wrap {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: clamp(58px, 9vw, 112px) 0 48px;
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--green);
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-size: clamp(54px, 9vw, 108px);
+  line-height: .9;
+  letter-spacing: -.085em;
+  margin: 0;
+  font-weight: 700;
+}
+
+h1 span { color: var(--green); }
+
+.intro {
+  font-size: clamp(15px, 2vw, 18px);
+  color: #aebbb0;
+  max-width: 480px;
+  line-height: 1.6;
+  margin: 26px 0;
+}
+
+.status-line {
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pulse {
+  width: 7px;
+  height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--green);
+}
+
+.slash { color: #445347; }
+
+.toolbar {
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 0 14px;
+  min-width: min(100%, 300px);
+  height: 42px;
+  flex: 1;
+  max-width: 380px;
+  color: var(--green);
+}
+
+.searchbox span { font-size: 24px; }
+
+.searchbox input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--text);
+  font: 12px var(--mono);
+  width: 100%;
+}
+
+.searchbox input::placeholder { color: #657267; }
+
+.categories {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.category-button {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font: 10px var(--mono);
+  letter-spacing: .6px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.category-button:hover,
+.category-button.active {
+  color: var(--bg);
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding: 10px 0 70px;
+}
+
+.video-card {
+  min-width: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  transition: transform .18s, border-color .18s;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green);
+}
+
+.thumb {
+  aspect-ratio: 16 / 9;
+  background: #1b241e;
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s;
+}
+
+.video-card:hover .thumb img { transform: scale(1.04); }
+
+.play-icon {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--green);
+  background: rgba(8,11,10,.85);
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-size: 15px;
+}
+
+.card-body { padding: 15px 15px 16px; }
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--green);
+  font-size: 9px;
+  margin-bottom: 9px;
+}
+
+.card-title {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0 0 7px;
+  letter-spacing: -.5px;
+}
+
+.card-description {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 36px;
+}
+
+.empty-state {
+  padding: 40px 0 90px;
+  text-align: center;
+  color: var(--muted);
+  font: 12px var(--mono);
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 0 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #6e7e72;
+  font-size: 9px;
+}
+
+.footer-star { color: var(--green); }
+
+.video-dialog {
+  width: min(900px, 94vw);
+  padding: 0;
+  background: #090d0a;
+  color: var(--text);
+  border: 1px solid var(--green);
+  box-shadow: 0 0 60px #000;
+}
+
+.video-dialog::backdrop {
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(4px);
+}
+
+.dialog-head {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--green);
+}
+
+.close-button {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: 10px var(--mono);
+  cursor: pointer;
+}
+
+.player {
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 850px) {
+  .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .toolbar { align-items: stretch; }
+  .searchbox { max-width: none; }
+  .categories { width: 100%; }
+}
+
+@media (max-width: 540px) {
+  .top-note { font-size: 8px; }
+  .video-grid { grid-template-columns: 1fr; gap: 14px; }
+  .hero { padding-top: 64px; }
+  .card-title { font-size: 20px; }
+  footer { line-height: 1.7; }
+}
+</style>
+</head>
+
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="#">
+    <span class="brand-mark">✳</span> 2000<span>SKID</span>
+  </a>
+  <div class="top-note">ARCHIVO DIGITAL // EST. 2000</div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">/// VIDEOTECA INDEPENDIENTE</p>
+    <h1>Tu internet.<br><span>Tu archivo.</span></h1>
+    <p class="intro">
+      Una colección personal de vídeos, rarezas y recuerdos de la web.
+    </p>
+    <div class="status-line">
+      <span class="pulse"></span> SISTEMA EN LÍNEA
+      <span class="slash">/</span>
+      <span id="video-count">0 ARCHIVOS</span>
+    </div>
+  </section>
+
+  <section class="toolbar" aria-label="Buscar vídeos">
+    <label class="searchbox">
+      <span aria-hidden="true">⌕</span>
+      <input id="search" type="search" placeholder="Buscar en el archivo..." autocomplete="off">
+    </label>
+    <div id="categories" class="categories" aria-label="Filtrar por categoría"></div>
+  </section>
+
+  <section id="video-grid" class="video-grid" aria-live="polite"></section>
+  <p id="empty-state" class="empty-state" hidden>
+    No hay resultados. Prueba otra búsqueda o categoría.
+  </p>
+
+  <footer>
+    <span>2000SKID © <span id="year"></span></span>
+    <span>HECHO PARA PERDERSE EN INTERNET <span class="footer-star">✳</span></span>
+  </footer>
+</main>
+
+<dialog id="video-dialog" class="video-dialog">
+  <div class="dialog-head">
+    <span id="dialog-title">REPRODUCIENDO ARCHIVO</span>
+    <button id="close-dialog" class="close-button" aria-label="Cerrar vídeo">✕ CERRAR</button>
+  </div>
+  <div id="player" class="player"></div>
+</dialog>
+
+<script>
+/*
+=========================================================
+AÑADIR VÍDEOS:
+1. Copia uno de los bloques de la lista.
+2. Pégalo antes del cierre ]; de la lista.
+3. Pon una coma entre cada bloque.
+4. Cambia título, enlace, categoría, año y descripción.
+=========================================================
+*/
+const videos = [
+  {
+    titulo: "Daft Punk — Digital Love",
+    url: "https://www.youtube.com/watch?v=FxzBvqY5PP0",
+    categoria: "Música",
+    anio: "2001",
+    descripcion: "Electrónica, animación y nostalgia de principios de los 2000."
+  },
+  {
+    titulo: "Gorillaz — Feel Good Inc.",
+    url: "https://www.youtube.com/watch?v=HyHNuVaZJ-k",
+    categoria: "Música",
+    anio: "2005",
+    descripcion: "Un clásico animado de la era dorada de internet."
+  },
+  {
+    titulo: "Crazy Frog — Axel F",
+    url: "https://www.youtube.com/watch?v=k85mRPqvMbE",
+    categoria: "Internet",
+    anio: "2005",
+    descripcion: "Caos digital y cultura pop en estado puro."
+  },
+  {
+    titulo: "The White Stripes — Seven Nation Army",
+    url: "https://www.youtube.com/watch?v=0J2QdDbelmY",
+    categoria: "Música",
+    anio: "2003",
+    descripcion: "Un riff que acabó siendo un himno generacional."
+  },
+  {
+    titulo: "Homestar Runner — Trogdor",
+    url: "https://www.youtube.com/watch?v=90X5NJleYJQ",
+    categoria: "Animación",
+    anio: "2003",
+    descripcion: "Humor web con sabor a Flash y a vieja escuela."
+  },
+  {
+    titulo: "Rick Astley — Never Gonna Give You Up",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    categoria: "Internet",
+    anio: "1987",
+    descripcion: "El rickroll: una tradición eterna de internet."
+  }
+];
+
+const grid = document.getElementById("video-grid");
+const search = document.getElementById("search");
+const categoriesEl = document.getElementById("categories");
+const empty = document.getElementById("empty-state");
+const count = document.getElementById("video-count");
+const dialog = document.getElementById("video-dialog");
+const player = document.getElementById("player");
+const dialogTitle = document.getElementById("dialog-title");
+
+let activeCategory = "Todos";
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function youtubeId(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes("youtu.be")) return u.pathname.slice(1);
+    if (u.hostname.includes("youtube.com")) {
+      if (u.pathname === "/watch") return u.searchParams.get("v");
+      const parts = u.pathname.split("/");
+      const i = parts.findIndex(x => ["embed", "shorts", "live"].includes(x));
+      if (i >= 0) return parts[i + 1];
+    }
+  } catch (e) {}
+  return null;
+}
+
+function buildCategories() {
+  categoriesEl.innerHTML = "";
+  const categories = ["Todos", ...new Set(videos.map(v => v.categoria).filter(Boolean))];
+
+  categories.forEach(category => {
+    const button = document.createElement("button");
+    button.className = "category-button" + (category === activeCategory ? " active" : "");
+    button.type = "button";
+    button.textContent = category.toUpperCase();
+
+    button.addEventListener("click", () => {
+      activeCategory = category;
+      buildCategories();
+      render();
+    });
+
+    categoriesEl.appendChild(button);
+  });
+}
+
+function playVideo(video) {
+  const id = youtubeId(video.url);
+
+  if (!id) {
+    window.open(video.url, "_blank", "noopener,noreferrer");
+    return;
+  }
+
+  dialogTitle.textContent = "REPRODUCIENDO // " + video.titulo;
+  player.innerHTML = "";
+
+  const frame = document.createElement("iframe");
+  frame.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) + "?autoplay=1&rel=0";
+  frame.title = video.titulo;
+  frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  frame.allowFullscreen = true;
+
+  player.appendChild(frame);
+  dialog.showModal();
+}
+
+function render() {
+  const query = search.value.trim().toLowerCase();
+
+  const filtered = videos.filter(video => {
+    const categoryMatch = activeCategory === "Todos" || video.categoria === activeCategory;
+    const text = (
+      video.titulo + " " +
+      (video.descripcion || "") + " " +
+      (video.categoria || "") + " " +
+      (video.anio || "")
+    ).toLowerCase();
+
+    return categoryMatch && text.includes(query);
+  });
+
+  count.textContent = filtered.length + " " +
+    (filtered.length === 1 ? "ARCHIVO" : "ARCHIVOS");
+
+  grid.innerHTML = "";
+  empty.hidden = filtered.length > 0;
+
+  filtered.forEach(video => {
+    const card = document.createElement("article");
+    card.className = "video-card";
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", "Reproducir " + video.titulo);
+
+    const thumb = document.createElement("div");
+    thumb.className = "thumb";
+
+    const img = document.createElement("img");
+    img.loading = "lazy";
+    img.alt = "";
+
+    const id = youtubeId(video.url);
+    if (id) {
+      img.src = "https://i.ytimg.com/vi/" + encodeURIComponent(id) + "/hqdefault.jpg";
+      img.onerror = () => { img.style.display = "none"; };
+    }
+
+    thumb.appendChild(img);
+
+    const play = document.createElement("span");
+    play.className = "play-icon";
+    play.textContent = "▶";
+    thumb.appendChild(play);
+
+    const body = document.createElement("div");
+    body.className = "card-body";
+
+    const meta = document.createElement("div");
+    meta.className = "card-meta";
+
+    const category = document.createElement("span");
+    category.textContent = (video.categoria || "SIN CATEGORÍA").toUpperCase();
+
+    const year = document.createElement("span");
+    year.textContent = video.anio || "—";
+
+    meta.append(category, year);
+
+    const title = document.createElement("h2");
+    title.className = "card-title";
+    title.textContent = video.titulo || "Vídeo sin título";
+
+    const description = document.createElement("p");
+    description.className = "card-description";
+    description.textContent = video.descripcion || "Pulsa para reproducir el archivo.";
+
+    body.append(meta, title, description);
+    card.append(thumb, body);
+
+    card.addEventListener("click", () => playVideo(video));
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        playVideo(video);
+      }
+    });
+
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById("close-dialog").addEventListener("click", () => dialog.close());
+dialog.addEventListener("close", () => { player.innerHTML = ""; });
+dialog.addEventListener("click", event => {
+  if (event.target === dialog) dialog.close();
+});
+
+search.addEventListener("input", render);
+
+buildCategories();
+render();
 </script>
+</body>
+</html>
+
+document.getElementById("close-dialog").addEventListener("click", () => dialog.close());
+dialog.addEventListener("close", () => { player.innerHTML = ""; });
+dialog.addEventListener("click", event => {
+  if (event.target === dialog) dialog.close();
+});
+
+search.addEventListener("input", render);
+
+buildCategories();
+render();
+</script>
+</body>
+</html>
+
