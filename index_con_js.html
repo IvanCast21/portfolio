@@ -382,12 +382,28 @@ footer {
   </section>
 
   <section class="toolbar" aria-label="Buscar vídeos">
+     <a class="extra-button" href="#archivo-extra">ARCHIVO EXTRA ↗</a>
     <label class="searchbox">
       <span aria-hidden="true">⌕</span>
       <input id="search" type="search" placeholder="Buscar en el archivo..." autocomplete="off">
     </label>
     <div id="categories" class="categories" aria-label="Filtrar por categoría"></div>
   </section>
+   <section id="archivo-extra" class="archivo-extra">
+  <h2>ARCHIVO EXTRA</h2>
+  <p>Material perdido, recuerdos y vídeos especiales.</p>
+
+  <div class="extra-grid">
+    <article class="extra-video">
+      <h3>Mi vídeo extra</h3>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+        VER VÍDEO ↗
+      </a>
+    </article>
+  </div>
+
+  <a href="#" class="extra-button">← VOLVER ARRIBA</a>
+</section>
 
   <section id="video-grid" class="video-grid" aria-live="polite"></section>
   <p id="empty-state" class="empty-state" hidden>
